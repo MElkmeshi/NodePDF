@@ -163,6 +163,12 @@ const run = async () => {
   });
   nodeHtmlToImage({
     selector: "table",
+    puppeteerArgs: {
+      defaultViewport: {
+        width: 3000,
+        height: 15000,
+      },
+    },
     output: "./image.png",
     html: newhtml,
   });
